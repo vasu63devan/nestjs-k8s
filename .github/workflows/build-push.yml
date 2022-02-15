@@ -16,7 +16,7 @@ jobs:
         
     - name: Docker Tag
       run: |
-        /bin/sh (docker images | awk '($1 == "vasu63devan/nestjs") {print $2 += .01; exit)}')
+        /bin/sh (docker images | awk '($1 == "vasu63devan/nestjs") {print $2 += .01; exit}')
         
     - name: docker build nestjs
       run: |
