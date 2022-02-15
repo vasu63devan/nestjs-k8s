@@ -1,9 +1,5 @@
 name: Docker Series Builds
 
-shell:
-  (docker images | awk '($1 == "vasu63devan/nestjs") {print $2 += .01; exit}')
-register: tag
-
 on: [push]
 
 jobs:
@@ -19,7 +15,7 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: docker build nestjs
       run: |
-        docker build . -t vasu63devan/nestjs:docker images | awk '($1 == "vasu63devan/nestjs") {print $2 += .01; exit}'
+        docker build . -t vasu63devan/nestjs:1.0.0
 
     - name: docker push
       run: |
