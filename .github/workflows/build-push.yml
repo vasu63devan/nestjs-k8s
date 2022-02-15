@@ -5,6 +5,9 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
     steps:
     - uses: actions/checkout@v2
     - name: docker login
@@ -14,9 +17,9 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
         
-    - name: Docker Tag
-      run: |
-        /bin/sh (docker images | awk '($1 == "vasu63devan/nestjs") {print $2 += .01; exit}')
+    #- name: Docker Tag    
+    #  run: |
+    #    /bin/sh (docker images | awk '($1 == "vasu63devan/nestjs") {print $2 += .01; exit}')
         
     - name: docker build nestjs
       run: |
