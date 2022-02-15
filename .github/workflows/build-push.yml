@@ -15,7 +15,7 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: docker build nestjs
       run: |
-        docker build -t vasu63devan/nestjs:1.0.0
+        docker build . -t vasu63devan/nestjs:1.0.0
     - name: docker push
       run: |
         docker push vasu63devan/nestjs:1.0.0
