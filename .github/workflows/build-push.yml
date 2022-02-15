@@ -1,5 +1,9 @@
 name: Docker Series Builds
 
+shell:
+  "(docker images | awk '($1 == "vasu63devan/nestjs") {print $2 += .01; exit}')
+register: tag
+
 on: [push]
 
 jobs:
