@@ -21,8 +21,8 @@ jobs:
         
     - name: docker build nestjs
       run: |
-        docker build . -t vasu63devan/nestjs:1.0.1
+        docker build . -t vasu63devan/nestjs:2.0.0
 
     - name: docker push
       run: |
-        docker push vasu63devan/nestjs:1.0.1
+        docker push vasu63devan/nestjs:2.0.0
