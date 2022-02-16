@@ -39,7 +39,7 @@ spec:
     spec:
       containers:
       - name: nestjs
-        image: hhaluk/demo:0.0.2
+        image: vasu63devan/nestjs:1.0.0
         env:
         - name: NODE_ENV
           value: "dev"

@@ -18,6 +18,6 @@ export class AppService {
   }
 
   getHello(): string {
-    return 'Hello World Varadharaj!';
+    return 'Hello World!';
   }
 }
